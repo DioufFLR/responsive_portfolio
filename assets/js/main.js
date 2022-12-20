@@ -1,11 +1,13 @@
 
 //================================ MENU SHOW Y HIDDEN ================================
+
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
 
 //================ MENU SHOW ================
 // Validate if constant exists
+
 if (navToggle) {
     navToggle.addEventListener("click", () => {
         navMenu.classList.add("show-menu")
@@ -13,6 +15,7 @@ if (navToggle) {
 }
 
 //================ MENU HIDDEN ================
+
 // Validate if constant exists
 if (navClose) {
     navClose.addEventListener("click", () => {
@@ -21,6 +24,7 @@ if (navClose) {
 }
 
 //================ REMOVE MENU MOBILE ================
+
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
@@ -31,6 +35,7 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 //================ ACCORDION SKILLS ================
+
 const skillsContent = document.getElementsByClassName("skills__content");
 const skillsHeader = document.querySelectorAll(".skills__header");
 
@@ -50,6 +55,7 @@ skillsHeader.forEach((el) => {
 })
 
 //================ QUALIFICATION TABS ================
+
 const tabs = document.querySelectorAll("[data-target]");
 const tabContents = document.querySelectorAll("[data-content]");
 
@@ -68,8 +74,30 @@ tabs.forEach(tab => {
         tab.classList.add("qualification__active");
     })
 })
+
 //================ SERVICES MODAL ================
 
+const modalViews = document.querySelectorAll('.services__modal');
+const modalBtns = document.querySelectorAll('.services__button');
+const modalCloses = document.querySelectorAll('.services__modal-close');
+
+let modal = function (modalClick) {
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtns, i) => {
+    modalBtns.addEventListener('click', () => {
+        modal(i)
+    })
+})
+
+modalCloses.forEach((modalCloses) => {
+    modalCloses.addEventListener('click', () => {
+        modalViews.forEach((modalViews) => {
+            modalViews.classList.remove('active-modal')
+        })
+    })
+})
 //================ PORTFOLIO SWIPER ================
 
 //================ TESTIMONIAL ================
