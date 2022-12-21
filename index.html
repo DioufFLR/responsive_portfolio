@@ -17,6 +17,7 @@
     <title>Responsive Portfolio</title>
 </head>
     <body>
+
     <!--====================== HEADER ======================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -25,7 +26,7 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list grid">
                     <li class="nav__items">
-                        <a href="#home" class="nav__link">
+                        <a href="#home" class="nav__link active-link">
                             <i class="uil uil-estate nav__icon"></i> Home
                         </a>
                     </li>
@@ -42,6 +43,11 @@
                     <li class="nav__items">
                         <a href="#services" class="nav__link">
                             <i class="uil uil-briefcase nav__icon"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-image nav__icon"></i> Portfolio
                         </a>
                     </li>
                     <li class="nav__items">
@@ -63,6 +69,7 @@
 
     <!--====================== MAIN ======================-->
     <main class="main">
+
         <!--====================== HOME ======================-->
         <section class="home section" id="home">
             <div class="home__container container grid">
@@ -118,6 +125,7 @@
 
             </div>
         </section>
+
         <!--====================== ABOUT ======================-->
         <section class="about section" id="about">
             <h2 class="section__title">About Me</h2>
@@ -154,8 +162,8 @@
                 </div>
             </div>
         </section>
-        <!--====================== SKILLS ======================-->
 
+        <!--====================== SKILLS ======================-->
         <section class="skills section" id="skills">
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My technical level</span>
@@ -786,6 +794,7 @@
                 </form>
             </div>
         </section>
+
     </main>
 
     <!--====================== FOOTER ======================-->
@@ -797,7 +806,7 @@
                     <span class="footer__subtitle">Frontend developer</span>
                 </div>
                 
-                <ul class="footer__link">
+                <ul class="footer__links">
                     <li>
                         <a href="#services" class="footer__link">Services</a>
                     </li>
@@ -825,7 +834,11 @@
             <p class="footer__copy">&#169; GeoffreyFleur. All right reserved</p>
         </div>
     </footer>
+
     <!--====================== SCROLL TOP ======================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scroll__icon"></i>
+    </a>
     <!--====================== SWIPER JS ======================-->
     <script src="assets/js/swiper-bundle.min.js"></script>
     <!--====================== MAIN JS ======================-->
